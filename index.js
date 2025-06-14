@@ -209,15 +209,14 @@ function viewTasks(viewBy) {
             break;
     }
             //
-    const template1=document.getElementById("main-template");
-    const template=template1.cloneNode(true); // Clone the template element
+    const template=document.getElementById("main-template");
     const taskContainer=document.getElementById("task-container");
     taskContainer.querySelectorAll('.added-task').forEach(task => {
         task.remove(); // Remove all previously added tasks
     });
     //if there are no tasks, display a message
     if(lowTask_sorted.length > 0 || mediumTask_sorted.length > 0 || highTask_sorted.length > 0) {
-       
+       template.style.display='none'; // Hide the template if there are tasks
     }
     else{
         const template=document.getElementById("main-template");
