@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Simple ToDo List</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div id="overlay">
+        <div id="form">
+          <input type="text" id="task-input" placeholder="Enter task here... " maxlength="20" />
+          <select id="priority">
+            <option value="" disabled selected>Select Priority</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <label for="due-date" id="label-due">Due date</label>
+          <input type="date" id="due-date" placeholder="Due Date" />
+          <button id="add">Add</button>
+          <button id="cancel">Cancel</button>
+        </div>
+      </div>
+      <div id="body">
+        <div id="header">
+          <img src=./images/bell-330.svg alt="Logo" id="logo">
+          <h1>My To Do</h1>
+          <div id="date-view">
+            <span id="date">1</span>
+            <span id="month">January</span>
+            <span id="year">2023</span>
+          </div>
+          <!-- dynamically add overdue or upcoming tasks amount for the day -->
+          <button id="add-task">Add Task</button>
+        </div>
+        <div id="side">
+          <div id="side-header">
+            <img src="./images/menu.svg" alt="Menu" id="side-icon" />
+          </div>
+          <div id="side-main">
+            <nav id="side-nav">
+              <ul>
+                <li id="all">
+                  <img src="./images/all.svg" alt="all icons" />All Tasks
+                </li>
+                <li id="completed">
+                  <img src="./images/complete.svg" alt="completed" />Completed
+                </li>
+                <li id="overdue">
+                  <img src="./images/overdue.svg" alt="Overdue" />Overdue
+                </li>
+                <li id="upcoming">
+                  <img
+                    src="./images/upcoming.svg"
+                    alt="upcoming tasks"
+                  />Upcoming
+                </li>
+                <li id="today">
+                  <img src="./images/today.svg" alt="tasks due today" />Today
+                </li>
+                <li id="delete">
+                  <img src="./images/delete-10400.svg" alt="delete all tasks" />Delete All
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+       <div id="task-container">
+          <div class="main" id="main-template">
+            <div class="task-details">
+              <span class="task-name" style="font-size:20px">Task Name</span>
+              <span class="task-priority">Priority</span>
+              <label for="status" class="task-status"><small><i>mark as done</i></small></label>
+             
+            </div>
+            <div class="task-date">
+              <span class="task-date-label">Due Date:</span>
+              <span class="task-day">1</span>
+              <span class="task-month">January</span>
+              <span class="task-year">2023</span>
+               <input type="radio" name="status" class="status" value="completed" />
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

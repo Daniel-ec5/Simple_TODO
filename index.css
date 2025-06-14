@@ -1,0 +1,225 @@
+:root {
+    --primary: #A5DEC8;
+    --sec: #F0F0F0;
+    --text: #333;
+    --sec2:#d4e9e3;
+}
+body{
+    background-color: var(--text);
+}
+.container{
+    width: 100%;
+    max-width: 600px;
+    min-height: 800px;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px dotted black;
+    padding: 20px;
+    background-color: #A5DEC8;
+}
+#overlay{
+    display:none;
+    align-self: center;
+    justify-self: center;
+    position: fixed; 
+}
+#form{
+    display: flex;
+    flex-direction: column  ;
+    margin:4em auto;
+    margin-left: 5em;
+    justify-self: center;
+    align-self: center;
+    width:100%;
+    height: 100%;
+    gap:1em;
+    background-color: var(--primary);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2em;
+}
+#form *{
+    width: 50%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid black;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    padding-left: 10px;
+    align-self: center;
+    
+}
+#form button:hover{
+    outline: none;
+    background-color: var(--sec2);
+}
+#task-input:hover{
+    transform: scale(2,1.1);
+}
+#header{
+    text-align: center;
+    margin-bottom: 22px;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    display: flex  ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+    gap:5px;
+}
+#header p{
+    color: var(--text);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4em;
+    margin-top: 0;
+}
+#logo{
+    width:80px;
+    height: 80px;
+}
+#side{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width:30%;
+    height: 100%;
+    z-index: 1000;
+    position: absolute;
+    
+}
+#side-icon{
+    width:40px;
+    height: 30px;
+    margin-left: 1em;
+    border-radius: 10%;
+    margin-top: 0em;
+}
+#side-icon:hover{
+    cursor: pointer;
+     background-color: var(--sec2);
+}
+#add-task{
+    width:70%;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 2px;
+    border: 1px solid black;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--sec2);
+}
+#add-task:hover{
+    outline: none;
+    background-color: var(--primary);
+}
+#date{
+    margin-bottom:1em;
+}
+#side-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: rgba(3, 141, 88, 0.32);
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top:1em ;
+    }
+ul li{
+    list-style: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 2px dotted black;
+    margin:.8em;
+    color: black;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+}
+li img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+#side-nav li:hover{
+    background-color: var(--sec2);
+    cursor: pointer;
+    img{
+        transform: scale(1.5);
+    }
+}
+#side-main{
+    display:none;
+    position: relative;
+    z-index: 1000;
+}
+#label-due{
+    font-size:15px;
+    font-family: 'Arial', sans-serif;
+    border: none;
+    margin-bottom:1px;
+    padding:1px;
+    width:150px;
+    height: 5px;
+}
+
+#task-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: .5em;
+}
+.main{
+    display:none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 80%;
+     /* border: 5px solid red; testing */
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow:  2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+    background-color: #8fa79e;
+    height:60px;
+    padding:5px;
+    justify-content: center;
+    align-items:flex-end;
+}
+.main:hover{
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.main input{
+    width:3em;
+    height: 1.5em;
+    border-radius: 20%;
+    border: 1px solid black;
+   
+}
+.task-details{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.task-date{
+    font-size: 13px;
+    margin-top: .2rem;;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    justify-content: center;
+
+}
+.task-year{
+    margin-right:3rem;
+}
+
